@@ -14,7 +14,10 @@ namespace TerminalFight
 
         public:
             void equip(Weapon weapon);
-            void fight(Fighter enemy);
+            std::string fight(Fighter* enemy);
+            int getHealth();
+            void setHealth(int damage);
+            std::string getName();
             std::string to_string();
         
         private:
