@@ -1,4 +1,4 @@
-#pragma once
+// #pragma once
 
 #include <string>
 #include "weapon.h"
@@ -14,7 +14,7 @@ namespace TerminalFight
 
         public:
             void equip(Weapon weapon);
-            std::string fight(Fighter* enemy);
+            std::string fight(Fighter enemy);
             int getHealth();
             void setHealth(int damage);
             std::string getName();

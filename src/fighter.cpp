@@ -18,12 +18,12 @@ namespace TerminalFight
         this->weapon = weapon;
     }
 
-    std::string Fighter::fight(Fighter *pEnemy)
+    std::string Fighter::fight(Fighter enemy)
     {
-        pEnemy->setHealth(this->weapon.get_damage());
-        this->setHealth(pEnemy->weapon.get_damage());
+        enemy.setHealth(this->weapon.get_damage());
+        this->setHealth(enemy.weapon.get_damage());
 
-        return pEnemy->getName() + "(remaining health: " + std::to_string(pEnemy->getHealth()) + ") fought " + this->getName() + "(remaining health: " + std::to_string(health) + ")";
+        return enemy.getName() + "(remaining health: " + std::to_string(enemy.getHealth()) + ") fought " + this->getName() + "(remaining health: " + std::to_string(health) + ")";
     }
 
     int Fighter::getHealth()

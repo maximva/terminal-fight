@@ -19,7 +19,7 @@ int main()
     std::cout << "Franky has " + std::to_string(franky.getHealth()) + " health." << std::endl;
 
     while (tom.getHealth() > 0 && franky.getHealth() > 0 ) {
-        std::cout << tom.fight(&franky) << std::endl;
+        std::cout << tom.fight(franky) << std::endl;
     }
 
     std::string loserName = (tom.getHealth() == 0) ? "Tom lost." : "Franky lost.";
